@@ -1,9 +1,10 @@
 const input = document.getElementById("word");
 const submitButton = document.getElementById("submit-button");
+const output = document.getElementById("output");
 
-submitButton.addEventListener("click", output);
+submitButton.addEventListener("click", vowelCounter);
 
-function output(e) {
+function vowelCounter(e) {
   e.preventDefault();
   const word = input.value.toString().toLowerCase();
   let counter = 0;
@@ -14,5 +15,5 @@ function output(e) {
     }
   });
 
-  console.log(counter);
+  output.innerText = `Vowels: ${counter}`;
 }
